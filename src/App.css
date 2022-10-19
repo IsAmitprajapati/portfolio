@@ -13,7 +13,10 @@
   --headerShadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
   --navMobileShadowTop: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
-
+::selection{
+  background-color: #80ced7;
+  color:white;
+}
 .container {
   width: 95%;
   margin: auto;
