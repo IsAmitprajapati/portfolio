@@ -6,55 +6,52 @@ import MenuBtn from './MenuBtn'
 import { ThemeModecontext } from '../contexts/ThemeMode';
 
 const Navigation = () => {
-  const {dark,setDark} = useContext(ThemeModecontext)
-  const [isOpen,setIsOpen] = useState(false)
+  const { dark, setDark } = useContext(ThemeModecontext)
+  const [isOpen, setIsOpen] = useState(false)
   const navRef = useRef()
   const nav = useRef()
 
-
-  const handleClick = ()=>{
-    navRef.current.classList.toggle("addNavbar")
-    nav.current.classList.toggle("sliderRight")
-    setIsOpen(preve => !preve)
+  const handleClick = () => {
+      navRef.current.classList.toggle("addNavbar")
+      nav.current.classList.toggle("sliderRight")
+      setIsOpen(preve => !preve)
   }
-
-
-
+  
   return (
     <>
-      <MenuBtn onClick={handleClick} isOpen = {isOpen}/>
-        <div className="navbar-mobile" ref={navRef}>
-          <nav className='nav' ref={nav}>
-            <ul>
-              <li>
-                <NavLink to="/" end>Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/project">Project</NavLink>
-              </li>
-              <li>
-                <NavLink to="/service">Services</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact</NavLink>
-              </li>
-              <li >
-                <div className='mode-dark-light'>
-                  {dark ? <i className="material-icons icon-mode-light" onClick={setDark}>&#xe518;</i>
-                    : <i className="fa-solid fa-moon icon-mode-dark" onClick={setDark}></i>
-                  }
-                </div>
-              </li>
-            </ul>
+      <MenuBtn onClick={handleClick} isOpen={isOpen} />
+      <div className="navbar-mobile" ref={navRef}>
+        <nav className='nav' ref={nav}>
+          <ul>
+            <li>
+              <NavLink to="/" onClick={handleClick} end>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/project" onClick={handleClick} >Project</NavLink>
+            </li>
+            <li>
+              <NavLink to="/service" onClick={handleClick} >Services</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" onClick={handleClick} >About</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" onClick={handleClick} >Contact</NavLink>
+            </li>
+            <li >
+              <div className='mode-dark-light' onClick={handleClick} >
+                {dark ? <i className="material-icons icon-mode-light" onClick={setDark}>&#xe518;</i>
+                  : <i className="fa-solid fa-moon icon-mode-dark" onClick={setDark}></i>
+                }
+              </div>
+            </li>
+          </ul>
 
 
-          </nav>
+        </nav>
 
-        </div>
-       </>
+      </div>
+    </>
   )
 }
 
