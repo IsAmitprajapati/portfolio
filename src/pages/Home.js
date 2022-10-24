@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Amit from "../assets/images/amit.png"
 
 const Home = () => {
@@ -23,6 +24,20 @@ const Home = () => {
               I've always been an analytical problem solver as well and the software developing process is a great fit for
               my personality and thinking style.
             </p>
+            <div className='homeBtnContainer'>
+
+              <button className='homeBtn'>
+                <Link to="contact" >
+                  Contact
+                </Link>
+              </button>
+
+              <button className='homeBtn'>
+                <a href='#'>
+                  Download
+                </a>
+              </button>
+            </div>
           </div>
         </div>
 

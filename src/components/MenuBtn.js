@@ -5,7 +5,7 @@ const MenuBtn = ({ onClick, isOpen }) => {
     <div className='menu-mobile-btn' onClick={onClick}>
       {
         isOpen ?
-          <i class="fa-solid fa-xmark"></i>
+          <i className="fa-solid fa-xmark"></i>
           :
           <i className="fa-solid fa-bars"></i>
       }

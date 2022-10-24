@@ -11,6 +11,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Service from './pages/Service';
 import {ThemeMode} from './contexts/ThemeMode';
+import Skill from './pages/Skill';
 
 const loding = async () => {
   const res = await fetch("https://api.sampleapis.com/wines/reds")
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
       {
         path: "service",
         element: <Service />,
+        // loader: teamLoader,
+      },
+      {
+        path: "skill",
+        element: <Skill/>,
         // loader: teamLoader,
       },
     ],

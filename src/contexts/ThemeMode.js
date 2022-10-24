@@ -4,7 +4,7 @@ const ThemeModecontext = createContext(null)
 
 function ThemeMode(props) {
     const [dark, setDark] = useToggle(true)
-    
+
     if (dark) {
         //background
         document.documentElement.style.setProperty('--bodyBackground', '#161a1d');
@@ -18,7 +18,8 @@ function ThemeMode(props) {
         document.documentElement.style.setProperty('--bodyText', '#ffffff');
 
         //shadow
-   
+        document.documentElement.style.setProperty('--textShadow', '1px 1px 3px rgba(0,0,0,0.5)');
+
 
     }
     else {
@@ -32,11 +33,11 @@ function ThemeMode(props) {
         document.documentElement.style.setProperty('--navigationColor', '#000000');
         document.documentElement.style.setProperty('--mobileMenuBtn', '#000000');
         document.documentElement.style.setProperty('--bodyText', '#000000');
-        
-        
-        //shadow
 
-        
+
+        //shadow
+        document.documentElement.style.setProperty('--textShadow', '1px 1px 3px rgba(0,0,0,0.1)');
+
     }
     return (
         <>

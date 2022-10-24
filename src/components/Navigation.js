@@ -30,7 +30,8 @@ const Navigation = () => {
               <NavLink to="/project" onClick={handleClick} >Project</NavLink>
             </li>
             <li>
-              <NavLink to="/service" onClick={handleClick} >Services</NavLink>
+              {/* <NavLink to="/service" onClick={handleClick} >Services</NavLink> */}
+              <NavLink to="/skill" onClick={handleClick} >Skills</NavLink>
             </li>
             <li>
               <NavLink to="/about" onClick={handleClick} >About</NavLink>
