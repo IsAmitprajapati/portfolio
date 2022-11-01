@@ -12,11 +12,14 @@ const Navigation = () => {
   const nav = useRef()
 
   const handleClick = () => {
-      navRef.current.classList.toggle("addNavbar")
-      nav.current.classList.toggle("sliderRight")
-      setIsOpen(preve => !preve)
+    console.log(window.innerWidth)
+      if (window.innerWidth < 700) {
+        navRef.current.classList.toggle("addNavbar")
+        nav.current.classList.toggle("sliderRight")
+        setIsOpen(preve => !preve)
+      }
   }
-  
+
   return (
     <>
       <MenuBtn onClick={handleClick} isOpen={isOpen} />

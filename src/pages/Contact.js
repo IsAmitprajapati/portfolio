@@ -132,7 +132,7 @@ const Contact = () => {
 
                 <li className='contact_Social_Icon' title='Hacker Rank'>
                   <a href='https://www.hackerrank.com/IsAmitprajapati' >
-                    <i class="fa-brands fa-hackerrank"></i>
+                    <i className="fa-brands fa-hackerrank"></i>
                   </a>
                 </li>
 
