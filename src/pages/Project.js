@@ -22,8 +22,11 @@ const Project = () => {
                 <img src={masaiSchoolImage}/>
               </div>
               <div className='project-item-details'>
-                <button>View</button>
-                
+                <h3>Restaurant E-commerce</h3>
+                <div className='project-item-details-btn-container'>
+                  <a href='#'>Link</a>
+                  <a href='#'>Github</a>
+                </div>
               </div>
             </div>
         </div>

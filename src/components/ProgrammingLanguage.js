@@ -13,7 +13,7 @@ import expressjsLogo from "../assets/images/technology/expressjs.png"
 const ProgrammingLanguage = () => {
     return (
         <>
-            <div className='ProgrammingLanguage_container'>
+            <div className='ProgrammingLanguage_container skillMobile'>
                 <div className='programming_lanugage'>
                     <img src={jslogo} />
                 </div>

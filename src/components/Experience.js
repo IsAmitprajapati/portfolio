@@ -24,7 +24,7 @@ const Experience = () => {
                         <span className='sepratedLine'></span>
                         <p>Present</p>
                         <span className='sepratedLine'></span>
-                        <p>5 Mos</p>
+                        <p>9 Mos</p>
                     </div>
                     <div className='detailsLocation'>
                         <p>Mumbai, Maharashtra, India</p>

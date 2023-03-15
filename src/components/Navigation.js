@@ -27,20 +27,24 @@ const Navigation = () => {
         <nav className='nav' ref={nav}>
           <ul>
             <li>
-              <NavLink to="/" onClick={handleClick} end>Home</NavLink>
+              <NavLink to="/" onClick={handleClick} className="desktop" end>Home</NavLink>
+              <NavLink to="/#" onClick={handleClick} className="mobile" end>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/project" onClick={handleClick} >Project</NavLink>
+              <NavLink to="/project" onClick={handleClick} className="desktop">Project</NavLink>
+              <NavLink to="/#project" onClick={handleClick} className="mobile">Project</NavLink>
             </li>
             <li>
               {/* <NavLink to="/service" onClick={handleClick} >Services</NavLink> */}
-              <NavLink to="/skill" onClick={handleClick} >Skills</NavLink>
+              <NavLink to="/skill" onClick={handleClick} className="desktop">Skills</NavLink>
+              <NavLink to="/#skill" onClick={handleClick} className="mobile" >Skills</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/about" onClick={handleClick} >About</NavLink>
-            </li>
+            </li> */}
             <li>
-              <NavLink to="/contact" onClick={handleClick} >Contact</NavLink>
+              <NavLink to="/contact" onClick={handleClick} className="desktop">Contact</NavLink>
+              <NavLink to="/#contact" onClick={handleClick} className="mobile">Contact</NavLink>
             </li>
             <li >
               <div className='mode-dark-light' onClick={handleClick} >
