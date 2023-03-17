@@ -48,7 +48,11 @@
   background-color: var(--selectionBackground);
   color:var(--selectionText);
 }
-
+html {scroll-behavior: smooth;}
+main{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 .container {
   width: 95%;
   margin: auto;
@@ -591,9 +595,12 @@ img {
   z-index: -1;
 }
 .project-List{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    grid-auto-rows: auto;
+    grid-auto-rows: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 .Project-item{
     width: 100%;
@@ -605,6 +612,7 @@ img {
     /* background-size: cover; */
    position: relative;
    border-radius: 7px;
+   overflow: hidden;
 
 }
 .project-item-image{
@@ -637,8 +645,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin:10px 0px;
+  gap: 5px;
+  margin:5px 0px;
 }
 .project-item-details-btn-container a{
   padding: 7px 21px;

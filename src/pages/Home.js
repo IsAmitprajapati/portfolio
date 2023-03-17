@@ -7,7 +7,7 @@ import Skill from './Skill'
 
 const Home = () => {
   return (
-    <main>
+    <main >
       <header className='header-home'>
 
         <div className='header-home-top'>
@@ -53,15 +53,15 @@ const Home = () => {
 
       </header>
 
-      <section id='skill' name="skill" className='mobile'>
+      <section id='skill' name="skill" className='mobile '>
         <Skill/>
       </section>
 
-      <section id='project' name="project" className='mobile'>
+      <section id='project' name="project" className='mobile '>
         <Project/>
       </section>
 
-      <section id='contact' name="contact" className='mobile'>
+      <section id='contact' name="contact" className='mobile '>
         <Contact/>
       </section>
     </main>

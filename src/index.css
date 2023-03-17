@@ -9,6 +9,7 @@ body {
   height: 100%;
   background-color: var(--bodyBackground);
   color:var(--bodyText);
+  scroll-behavior: smooth;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
