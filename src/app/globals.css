@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f7fa;
+  --foreground: #002970;
+
+  --paytm-blue: #00baf2;
+  --paytm-dark-blue: #002970;
+  --paytm-light-blue: #e8f7fd;
+  --paytm-secondary-blue: #0084ff;
+
+  --bg-app: #f4f6fa;
+  --bg-panel: #ffffff;
+  --bg-panel-darker: #eef2f6;
+  --border-theme: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --hover-theme: #f8fafc;
+}
+
+.dark {
+  --background: #050a16;
+  --foreground: #f8fafc;
+
+  --paytm-blue: #00baf2;
+  --paytm-dark-blue: #38bdf8;
+  --paytm-light-blue: #0c1e36;
+  --paytm-secondary-blue: #0099ff;
+
+  --bg-app: #050a16;
+  --bg-panel: #0c1328;
+  --bg-panel-darker: #080c1b;
+  --border-theme: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --hover-theme: #16223f;
+}
+
+@theme inline {
+  --color-paytm-blue: var(--paytm-blue);
+  --color-paytm-dark-blue: var(--paytm-dark-blue);
+  --color-paytm-light-blue: var(--paytm-light-blue);
+  --color-paytm-secondary-blue: var(--paytm-secondary-blue);
+  --color-bg-app: var(--bg-app);
+  --color-bg-panel: var(--bg-panel);
+  --color-bg-panel-darker: var(--bg-panel-darker);
+  --color-border-theme: var(--border-theme);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-hover-theme: var(--hover-theme);
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Custom scrollbars for timeline and grid catalogs */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--border-theme);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: var(--paytm-blue);
+}
+
+/* Keyframe animations */
+@keyframes laser-scan {
+  0% {
+    top: 5%;
+  }
+  50% {
+    top: 95%;
+  }
+  100% {
+    top: 5%;
+  }
+}
+
+.animate-laser {
+  animation: laser-scan 4s linear infinite;
+}
+
+@keyframes led-blink-green {
+  0%, 100% { opacity: 0.3; filter: drop-shadow(0 0 1px rgba(34, 197, 94, 0.2)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.8)); }
+}
+
+@keyframes led-blink-yellow {
+  0%, 100% { opacity: 0.3; filter: drop-shadow(0 0 1px rgba(234, 179, 8, 0.2)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(234, 179, 8, 0.8)); }
+}
+
+@keyframes led-blink-blue {
+  0%, 100% { opacity: 0.3; filter: drop-shadow(0 0 1px rgba(0, 186, 242, 0.2)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(0, 186, 242, 0.8)); }
+}
+
+.animate-led-green {
+  animation: led-blink-green 1.5s infinite;
+}
+
+.animate-led-yellow {
+  animation: led-blink-yellow 2s infinite;
+}
+
+.animate-led-blue {
+  animation: led-blink-blue 1.8s infinite;
+}
+
+/* Shimmer load animation */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite;
+  content: '';
+}
+
+.dark .animate-shimmer::after {
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 186, 242, 0) 0%,
+    rgba(0, 186, 242, 0.05) 20%,
+    rgba(0, 186, 242, 0.15) 60%,
+    rgba(0, 186, 242, 0) 100%
+  );
+}
