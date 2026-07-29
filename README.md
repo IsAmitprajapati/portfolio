@@ -1,13 +1,13 @@
 # 💙 Paytm Developer Portfolio - Amit Prajapati
 
-[![Live Demo](https://img.shields.io/badge/demo-online-00baf2.svg)](https://portfolio-fawn-chi-1rk5d5oyxv.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-online-00baf2.svg)](https://paytm-portolio.vercel.app)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black.svg?style=flat&logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8.svg?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 
 An interactive, premium developer portfolio designed around the theme of **Paytm**, the leading fintech provider. It showcases full-stack web and mobile application engineering skills, experiences, and personal projects using fintech dashboard components and retail merchant device simulations.
 
-🔗 **Live Link:** [portfolio-fawn-chi-1rk5d5oyxv.vercel.app](https://portfolio-fawn-chi-1rk5d5oyxv.vercel.app)
+🔗 **Live Link:** [portfolio-fawn-chi-1rk5d5oyxv.vercel.app](https://paytm-portolio.vercel.app)
 
 ---
 
@@ -86,7 +86,7 @@ Follow these steps to run the project locally.
    CONTACT_EMAIL_RECEIVER=your_email@example.com
 
    # Site deployment base URL
-   NEXT_PUBLIC_APP_URL=https://portfolio-fawn-chi-1rk5d5oyxv.vercel.app
+   NEXT_PUBLIC_APP_URL=https://paytm-portolio.vercel.app
    ```
 
 4. **Run the development server:**
