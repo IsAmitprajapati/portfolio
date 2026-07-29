@@ -1,13 +1,13 @@
 # 🎨 Adobe Portfolio - Amit Prajapati
 
-[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://adobe-portfolio.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://adobe-portfolio-theme.vercel.app)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black.svg?style=flat&logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-blue.svg?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 
 An interactive, premium developer portfolio designed around the theme of the **Adobe Creative Suite**. It showcases full-stack web and mobile application development skills, job experiences, and personal projects using creative desktop app layouts.
 
-🔗 **Live Link:** [adobe-portfolio.vercel.app](https://adobe-portfolio.vercel.app)
+🔗 **Live Link:** [adobe-portfolio-theme.vercel.app](https://adobe-portfolio-theme.vercel.app)
 
 ---
 
@@ -83,7 +83,7 @@ Follow these steps to run the project locally.
    CONTACT_EMAIL_RECEIVER=your_email@example.com
 
    # Site deployment base URL
-   NEXT_PUBLIC_APP_URL=https://adobe-portfolio.vercel.app
+   NEXT_PUBLIC_APP_URL=https://adobe-portfolio-theme.vercel.app
    ```
 
 4. **Run the development server:**
