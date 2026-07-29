@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 🎨 Adobe Portfolio - Amit Prajapati
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://adobe-portfolio.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black.svg?style=flat&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-blue.svg?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 
-## Available Scripts
+An interactive, premium developer portfolio designed around the theme of the **Adobe Creative Suite**. It showcases full-stack web and mobile application development skills, job experiences, and personal projects using creative desktop app layouts.
 
-In the project directory, you can run:
+🔗 **Live Link:** [adobe-portfolio.vercel.app](https://adobe-portfolio.vercel.app)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🖥️ Interactive Workspaces (Features)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The portfolio is structured as a series of simulated Adobe Creative Suite applications, allowing users to experience different facets of Amit's work through familiar interfaces:
 
-### `npm test`
+1. **🖌️ Photoshop Workspace Canvas (About & Profile)**
+   - Simulated Photoshop interface complete with canvas zoom controls, dynamic layer selection, toolbar items, and an interactive edit history log.
+   - Highlights personal bio, details, and core engineering philosophies.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **🎨 Creative Cloud Swatches & Presets (Skills Panel)**
+   - Displays developer skill cards categorized as tech "swatches" (React, Next.js, TypeScript, Node.js, MongoDB, Docker, AWS, etc.).
 
-### `npm run build`
+3. **🎬 After Effects Composition (Services Offered)**
+   - Emulates an After Effects viewport and timeline composition, showing core engineering services like Full Stack Web Development and Mobile App Development.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **🎞️ Premiere Pro Timeline Track (Job Experience)**
+   - Recreates a Premiere Pro video editing timeline track where job experiences are represented as draggable/clickable clips across video, audio, and text tracks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. **📸 Lightroom Library Catalog (Projects Grid)**
+   - Mirrors a Lightroom library view, enabling users to browse, filter, and inspect various software projects and source repositories.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. **☁️ Creative Cloud Review (Testimonials)**
+   - Displays professional recommendations and client feedback in a collaborative cloud review mockup.
 
-### `npm run eject`
+7. **⚙️ Preferences Panel (Contact Form)**
+   - An interactive settings dialog box that handles contacting the developer, fully integrated with MongoDB and Resend for email notifications.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Technology Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router, Turbopack, React 19)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) with custom CSS variables for smooth light/dark and custom Adobe theme configurations
+- **Animation:** [Framer Motion](https://www.framer.com/motion/) for fluid desktop-like micro-interactions
+- **Icons:** [Lucide React](https://lucide.dev/) for high-quality SVG interface icons
+- **Database:** [MongoDB](https://www.mongodb.com/) (using Mongoose object modeling)
+- **Email:** [Resend API](https://resend.com/) for reliable delivery of contact messages
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🚀 Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Follow these steps to run the project locally.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
 
-### Code Splitting
+- Node.js (version 18+ recommended)
+- MongoDB instance (Atlas or local)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation
 
-### Analyzing the Bundle Size
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ISAMITPRAJAPATI/portfolio.git
+   cd portfolio
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-### Making a Progressive Web App
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory and add the following:
+   ```env
+   # MongoDB Connection string
+   MONGODB_URI=your_mongodb_connection_uri
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   # Resend API configuration for emails
+   RESEND_API_KEY=re_your_resend_api_key
+   CONTACT_EMAIL_RECEIVER=your_email@example.com
 
-### Advanced Configuration
+   # Site deployment base URL
+   NEXT_PUBLIC_APP_URL=https://adobe-portfolio.vercel.app
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) (or the port indicated in terminal) in your browser to explore the creative workspaces.
 
-### Deployment
+5. **Build for Production:**
+   ```bash
+   npm run build
+   npm run start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👤 About the Developer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed with passion by **Amit Prajapati**, Full Stack Developer specializing in crafting high-performance, visually stunning web and mobile experiences.
+
+- **LinkedIn:** [@itsamitprajapati](https://www.linkedin.com/in/itsamitprajapati/)
+- **GitHub:** [@isamitprajapati](https://github.com/isamitprajapati)
+- **Portfolio Website:** [amitprajapati.co.in](https://amitprajapati.co.in)

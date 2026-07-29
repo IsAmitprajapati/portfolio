@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* 1. Theme CSS Variable Tokens */
+:root {
+  /* Default: Light Mode */
+  --theme-bg-app: #f4f4f5;          /* zinc-100 */
+  --theme-bg-panel: #ffffff;        /* white */
+  --theme-bg-panel-darker: #e4e4e7; /* zinc-200 */
+  --theme-bg-dropdown: #ffffff;     /* white dropdown */
+  --theme-border: #d4d4d8;          /* zinc-300 */
+  --theme-text-primary: #09090b;    /* zinc-950 */
+  --theme-text-secondary: #3f3f46;  /* zinc-700 */
+  --theme-text-muted: #71717a;      /* zinc-500 */
+  --theme-hover: #f4f4f5;           /* zinc-100 */
+  
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* Dark Mode Overrides (triggered when html/body has class .dark) */
+.dark {
+  --theme-bg-app: #09090b;          /* zinc-950 */
+  --theme-bg-panel: #18181b;        /* zinc-900 */
+  --theme-bg-panel-darker: #121214; /* zinc-920 */
+  --theme-bg-dropdown: #202023;     /* zinc-850 */
+  --theme-border: #27272a;          /* zinc-800 */
+  --theme-text-primary: #f4f4f5;    /* zinc-100 */
+  --theme-text-secondary: #a1a1aa;  /* zinc-400 */
+  --theme-text-muted: #52525b;      /* zinc-600 */
+  --theme-hover: #27272a;           /* zinc-800 */
+}
+
+/* Creative Cloud Theme Mode (triggered when html has class .adobe-theme) */
+.adobe-theme {
+  --theme-bg-app: #141414;          /* very dark charcoal bg */
+  --theme-bg-panel: #202022;        /* Ps panel dark gray */
+  --theme-bg-panel-darker: #1a1a1c; /* Ps menu header bar */
+  --theme-bg-dropdown: #2a2a2c;     /* Ps dropdown */
+  --theme-border: #2d2d30;          /* slate gray border */
+  --theme-text-primary: #ffffff;    /* pure white text */
+  --theme-text-secondary: #c5c5c8;  /* light gray text */
+  --theme-text-muted: #7f7f82;      /* medium gray text */
+  --theme-hover: #333336;           /* selector hover active */
+}
+
+/* 2. Tailwind v4 Inline Theme Registration */
+@theme inline {
+  --color-bg-app: var(--theme-bg-app);
+  --color-bg-panel: var(--theme-bg-panel);
+  --color-bg-panel-darker: var(--theme-bg-panel-darker);
+  --color-bg-dropdown: var(--theme-bg-dropdown);
+  --color-border-theme: var(--theme-border);
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-text-muted: var(--theme-text-muted);
+  --color-hover-theme: var(--theme-hover);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* 3. Base Body Defaults */
+body {
+  background-color: var(--theme-bg-app);
+  color: var(--theme-text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Custom scrollbars for timeline and grid catalogs */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--theme-bg-app);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--theme-border);
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #ef4444; /* red-500 (Adobe highlight) */
+}
